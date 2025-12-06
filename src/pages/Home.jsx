@@ -27,7 +27,7 @@ const Home = () => {
             ) : (
                 <div className="max-w-3xl m-0 mx-auto p-8">
                     {cyrptoList.map((crypto, key) => (
-                        <CryptoCard />
+                        <CryptoCard crypto={crypto} key={key} />
                     ))}
                 </div>
             )}
