@@ -1,4 +1,4 @@
-import { formatPrice } from "../utils/formatter"
+import { formatMarketCap, formatPrice } from "../utils/formatter"
 
 const CryptoCard = ({crypto}) => {
   return (
@@ -27,11 +27,20 @@ const CryptoCard = ({crypto}) => {
             </p>
         </div>
         <div className="crypto-stats">
-            <div className="stats">
+            <div className="stat">
                 <span className="stat-label">Market Cap</span>
-                <span className="stat-value">{crypto.market_cap.toFixed(2)}</span>
+                <span className="stat-value">
+                  ${formatMarketCap(crypto.market_cap)}
+                </span>
             </div>
-  first </div>
+
+            <div className="stat">
+                <span className="stat-label">Volume</span>
+                <span className="stat-value">
+                  ${formatMarketCap(crypto.total_volume)}
+                </span>
+            </div>
+        </div>
     </div>
   )
 }

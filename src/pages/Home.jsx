@@ -4,6 +4,7 @@ import CryptoCard from "../components/CryptoCard";
 const Home = () => {
     const [cyrptoList, setCryptoList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [viewMode, setViewMode] = useState('grid');
     const fetchCryptoData = async () =>{
         try{
             const data = await fetchCrypto();
@@ -18,14 +19,33 @@ const Home = () => {
         fetchCryptoData();
     }, []);
     return (
-        <div className="min-h-screen bg-[#010203] p-0">
+        <div className="app">
+            <div className="controls">
+                <div className="filter-group">
+                    <label>Sort By:</label>
+                    <select>
+                        <option value="market_cap_rank">Rank</option>
+                        <option value="name">Name</option>
+                        <option value="price">Price(low to high)</option>
+                        <option value="price_desc">Price(high to low)</option>
+                        <option value="change">24h Change</option>
+                        <option value="market_cap">Market Cap</option>
+                    </select>
+                </div>
+                <div className="view-toggle">
+                    <button className={viewMode === "grid" ? 'active' : ''} 
+                        onClick={()=>setViewMode('grid')}>Grid</button>
+                    <button className={viewMode === "list" ? 'active' : ''}
+                        onClick={()=>setViewMode('list')}>List</button>
+                </div>
+            </div>
             {isLoading ? (
-                <div className="flex flex-col items-center justify-center text-[#e0e0e0] gap-4 p-10">
-                    <div className="w-6 h-6 border-2 border-[rgba(173, 216, 230, 0.2)] border-t-[#add8e6] border-t rounded-full animate-spin"></div>
+                <div className="loading">
+                    <div className="spinner"></div>
                     <p>Loading Crypto Data...</p>
                 </div>
             ) : (
-                <div className="max-w-3xl m-0 mx-auto p-8">
+                <div className={`crypto-container ${viewMode}`}>
                     {cyrptoList.map((crypto, key) => (
                         <CryptoCard crypto={crypto} key={key} />
                     ))}
