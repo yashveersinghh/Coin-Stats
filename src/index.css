@@ -28,7 +28,7 @@ body {
 }
 
 .header {
-  backdrop-filter: blur(20px);
+  background: #010203;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   padding: 2rem 0;
   position: sticky;
@@ -106,6 +106,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+  max-width: 100%;
 }
 
 .filter-group label {
@@ -123,6 +124,8 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .filter-group select:hover {
@@ -133,6 +136,12 @@ body {
   outline: none;
   border-color: #add8e6;
   box-shadow: 0 0 0 3px rgba(173, 216, 230, 0.2);
+}
+
+.filter-group select option {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 0.5rem;
 }
 
 .view-toggle {
@@ -575,15 +584,26 @@ body {
   .controls {
     flex-direction: column;
     align-items: stretch;
+    padding: 0 1rem;
   }
 
   .filter-group {
     flex-direction: column;
     align-items: stretch;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .filter-group label {
+    text-align: left;
   }
 
   .filter-group select {
     width: 100%;
+    max-width: 100%;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
   }
 
   .view-toggle {
