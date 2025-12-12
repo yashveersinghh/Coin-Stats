@@ -1,16 +1,37 @@
-# React + Vite
+# Coin Stats
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live demo: https://coin-stats-seven.vercel.app/
 
-Currently, two official plugins are available:
+A responsive cryptocurrency dashboard built with React and Tailwind CSS. Shows market data, coin details, price charts, search and sorting, with a clean mobile friendly UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Live market overview with paging and sorting
+- Detailed coin page with price chart
+- Search coins by name or symbol
+- Fully responsive Tailwind CSS design
+- Smooth routing using React Router
+- Fast deploy on Vercel
 
-## React Compiler
+## Tech Stack
+- **React**
+- **Tailwind CSS**
+- **React Router**
+- **Fetch or Axios** for API calls
+- **Vercel** deployment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Demo
+https://coin-stats-seven.vercel.app/
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Requirements
+- Node.js 18 or higher
+- npm or yarn
+
+### Installation
+```bash
+git clone https://github.com/your-username/coin-stats.git
+cd coin-stats
+npm install
+# or
+# yarn
