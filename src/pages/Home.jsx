@@ -118,10 +118,27 @@ const Home = () => {
             <header className="header">
                 <div className="header-content">
                     <div className="logo-section">
-                        <h1>🚀 Crypto Tracker</h1>
+                        <h1>🚀 Coin Stats</h1>
                         <p>Real-time Cryptocurrency prices and market data</p>
                     </div>
-                    <div className="search-section">
+
+                    <div className="search-section flex gap-8">
+                    <a
+                        href="https://github.com/yashveersinghh/Coin-Stats.git"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 rounded-lg px-1 py-1 text-white hover:bg-white/10 shrink-0"
+                        >
+                        <svg viewBox="0 0 24 24" aria-hidden="true" className="w-6 h-6 fill-white">
+                            <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.480 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.070 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.910.828.092-.643.350-1.083.636-1.332-2.220-.251-4.555-1.107-4.555-4.927 0-1.088.390-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .840-.268 2.750 1.022A9.607 9.607 0 0 1 12 6.820c.850.004 1.705.114 2.504.336 1.909-1.290 2.747-1.022 2.747-1.022.546 1.372.202 2.386.100 2.638.640.696 1.028 1.587 1.028 2.675 0 3.830-2.339 4.673-4.566 4.920.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.180.577.688.480 3.970-1.320 6.833-5.054 6.833-9.458C22 6.463 17.522 2 12 2Z"
+                            />
+                        </svg>
+
+                        <span className="hidden md:inline text-sm font-semibold">Repo</span>
+                    </a>
                         <input type="text" 
                                onChange={(e)=>{setSearchQuery(e.target.value)}} 
                                value={searchQuery}
